@@ -3,14 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/user/AndroidStudioProjects/WorkWithFilesAppA/app/src/main/res/drawable/default_background.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WorkWithFilesAppA/app/src/main/res/layout/activity_main.xml" value="0.228125" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/WorkWithFilesAppA/app/src/main/res/layout/activity_main2.xml" value="0.21422101449275363" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/WorkWithFilesAppA/app/src/main/res/layout/fragment_choose_action.xml" value="0.21422101449275363" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/WorkWithFilesAppA/app/src/main/res/layout/fragment_file_external_storage.xml" value="0.2421875" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/WorkWithFilesAppA/app/src/main/res/layout/fragment_file_internal_storage.xml" value="0.228125" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/WorkWithFilesAppA/app/src/main/res/layout/fragment_photo_external_storage.xml" value="0.2421875" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/WorkWithFilesAppA/app/src/main/res/layout/fragment_photo_internal_storage.xml" value="0.2421875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WorkWithFilesAppA/app/src/main/res/xml/file_paths.xml" value="0.1703125" />
       </map>
     </option>
