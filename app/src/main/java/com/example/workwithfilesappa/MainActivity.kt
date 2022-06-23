@@ -20,7 +20,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import java.io.File
 import java.io.IOException
-import java.lang.Exception
+
 
 class MainActivity : AppCompatActivity() {
     val REQUEST_IMAGE_CAPTURE = 1
@@ -53,7 +53,16 @@ class MainActivity : AppCompatActivity() {
         cameraButton.setOnClickListener {
           //  takePictureShared()
          //   takePictureSharedPreview()
+         //   takePictureInternal1()
             takePictureInternal2()
+        }
+
+        photoImageView.setOnClickListener {
+            val launchIntent =
+                packageManager.getLaunchIntentForPackage("com.example.workwithfileappb")?.apply {
+                    putExtra("photoPath", currentPhotoPath)
+                }
+            launchIntent?.let { startActivity(it) }
         }
     }
 
@@ -129,9 +138,7 @@ class MainActivity : AppCompatActivity() {
             null
         }
         photoFile?.also {
-            val photoURI: Uri = FileProvider.getUriForFile(
-                this, "com.example.android.fileprovider", it
-            )
+            val photoURI: Uri = FileProvider.getUriForFile(this, "com.example.android.fileprovider", it)
             intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
             takePictureInternal2.launch(intent)
         }
