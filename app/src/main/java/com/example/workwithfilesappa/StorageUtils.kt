@@ -8,9 +8,7 @@ import android.provider.MediaStore
 import android.util.Log
 import androidx.activity.result.ActivityResultLauncher
 import androidx.core.content.ContextCompat
-import java.io.BufferedReader
-import java.io.IOException
-import java.io.InputStreamReader
+import java.io.*
 
 class StorageUtils {
     companion object {
@@ -50,7 +48,7 @@ class StorageUtils {
             return hasWritePermission
         }
 
-        fun getImageCollectionUri() = sdk29AndUp {
+        fun getImageCollectionUri()= sdk29AndUp {
             MediaStore.Images.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY)
         } ?: MediaStore.Images.Media.EXTERNAL_CONTENT_URI
 
