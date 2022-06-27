@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        tools:viewBindingIgnore="true"
+        tools:context=".ChooseActionFragment">
+
+        <Button
+            android:id="@+id/open_photo_internal_storage_fragment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open photo internal storage fragment" />
+
+        <Button
+            android:id="@+id/open_photo_shared_storage_fragment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open photo shared storage fragment" />
+
+        <Button
+            android:id="@+id/open_file_internal_storage_fragment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open file internal storage fragment" />
+
+        <Button
+            android:id="@+id/open_file_shared_storage_fragment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open file shared storage fragment" />
+
+    </LinearLayout>
+</layout>
