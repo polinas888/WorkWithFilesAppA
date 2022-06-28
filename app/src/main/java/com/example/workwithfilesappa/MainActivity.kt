@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container_view, ChooseActionFragment())
-                .commit();
+                .commit()
         }
     }
 }

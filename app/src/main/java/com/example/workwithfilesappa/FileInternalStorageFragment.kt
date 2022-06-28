@@ -29,7 +29,8 @@ class FileInternalStorageFragment : Fragment() {
             val content = binding.editTextForTextFile.text.toString()
             val path = context?.filesDir
             val uri: Uri = getUriForFile(
-                requireContext(), "com.example.android.fileprovider", File(path, "myAppFile.txt"))
+                requireContext(), "com.example.android.fileprovider", File(path, "myAppFile.txt")
+            )
             StorageUtils.writeToFile(content, requireContext(), uri)
         }
 
@@ -42,12 +43,16 @@ class FileInternalStorageFragment : Fragment() {
 
         binding.sentFileButton.setOnClickListener {
             val fileUri: Uri = getUriForFile(
-                requireContext(), "com.example.android.fileprovider", File(context?.filesDir, "myAppFile.txt"))
+                requireContext(),
+                "com.example.android.fileprovider",
+                File(context?.filesDir, "myAppFile.txt")
+            )
             val launchIntent =
-                requireContext().packageManager.getLaunchIntentForPackage("com.example.workwithfileappb")?.apply {
-                    data = fileUri
-                    addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                }
+                requireContext().packageManager.getLaunchIntentForPackage("com.example.workwithfileappb")
+                    ?.apply {
+                        data = fileUri
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
             startActivity(launchIntent)
         }
     }

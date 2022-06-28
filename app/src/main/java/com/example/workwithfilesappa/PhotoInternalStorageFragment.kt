@@ -8,12 +8,12 @@ import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.FileProvider
+import androidx.fragment.app.Fragment
 import com.example.workwithfilesappa.databinding.FragmentPhotoInternalStorageBinding
 import java.io.File
 import java.io.IOException
@@ -49,10 +49,11 @@ class PhotoInternalStorageFragment : Fragment() {
                 File(currentPhotoPath)
             )
             val launchIntent =
-                requireContext().packageManager.getLaunchIntentForPackage("com.example.workwithfileappb")?.apply {
-                    data = photoURI
-                    addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                }
+                requireContext().packageManager.getLaunchIntentForPackage("com.example.workwithfileappb")
+                    ?.apply {
+                        data = photoURI
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
             startActivity(launchIntent)
         }
     }
